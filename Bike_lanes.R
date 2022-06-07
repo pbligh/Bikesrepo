@@ -13,6 +13,23 @@ lines <- st_read("/Users/philipbligh/Downloads/Velo.gdb", layer = "RESEAU_1991_2
 
 glimpse(lines)
 
-count(lines, Typo_2001, na.rm = T)
+`1986` <- lines %>% filter(An1986 == 1)
+
+`1991` <- lines %>% filter(An1991 == 1)
+
+`1996` <- lines %>% filter(An1996 == 1)
+
+`2001` <- lines %>% filter(An2001 == 1)
+
+`2006` <- lines %>% filter(An2006 == 1)
+
+`2011` <- lines %>% filter(An2011 == 1)
+
+`2016` <- lines %>% filter(An2016 == 1)
+
+
+plot(`1986`["Statut"])
+
+
 
 
